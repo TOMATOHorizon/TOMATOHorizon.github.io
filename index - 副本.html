@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Web Page</title>
+		<style>
+			body {
+				background-image: url("./img/img104.jpg");
+				background-size: cover;
+			}
+
+			#navbar {
+				background-color: #333;
+				overflow: hidden;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				height: 8vh;
+				background-color: transparent;
+				backdrop-filter: blur(5px);
+			}
+
+			.navbar-section {
+				color: black;
+				padding: 1vh 0.5vw;
+				font-size: 2vh;
+				text-align: center;
+				cursor: pointer;
+				background-color: rgba(255, 255, 255, 0.3);
+				flex-basis: 20%;
+				margin: 0vh 0vw;
+			}
+
+			.navbar-section:nth-child(1),
+			.navbar-section:nth-child(2) {
+				position: relative;
+				left: -3vw;
+				transform: skew(-20deg);
+			}
+			
+			.navbar-section:nth-child(3),
+			.navbar-section:nth-child(4) {
+				position: relative;
+				right: -3vw;
+				transform: skew(20deg);
+			}
+
+			.navbar-section:hover {
+				background-color: #555;
+			}
+
+			#content {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+				height: 80vh;
+				margin-top: 2vh;
+			}
+
+			.content-section {
+				width: 25vw;
+				height: 25vh;
+				background-color: white;
+				border-radius: 10px;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				transition: all 0.2s ease;
+				margin: 1vh 1vw;
+			}
+
+			.content-section:hover {
+				background-color: #eee;
+			}
+
+			#intro {
+				background-color: white;
+				border-radius: 10px;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+				padding: 1vh 2vw;
+				margin: 2vh 2vw;
+				height: 5vh;
+				width: calc(24.5% - 4vw);
+				position: fixed;
+				top: 90%;
+				right: 2.4vw;
+				transform: translateY(-50%);
+			}
+
+			#contact {
+				position: absolute;
+				bottom: 2vh;
+				right: 2vw;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.contact-icon {
+				width: 5vw;
+				height: 5vw;
+				margin-top: 1vh;
+				cursor: pointer;
+			}
+
+			.contact-icon:hover {
+				transform: scale(1.1);
+			}
+
+			/* media query for mobile devices */
+			@media only screen and (max-width: 600px) {
+				#navbar {
+					flex-direction: row;
+					height: auto;
+				}
+
+				.navbar-section {
+					width: 30%;
+					height: 50px;
+					padding: 0px;
+					font-size: 16px;
+					transform: skew(-20deg);
+				}
+
+				.navbar-section:nth-child(3),
+				.navbar-section:nth-child(4) {
+					transform: skew(20deg);
+				}
+
+				#content {
+					margin-top: 70px;
+					height: auto;
+				}
+
+				.content-section {
+					width: 80%;
+					height: 150px;
+					margin-top: 10px;
+				}
+				
+				#intro {
+					background-color: white;
+					border-radius: 10px;
+					shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+					padding: 20px;
+					margin: 20px;
+					height: calc(7%);
+					width: calc(80%);
+					position: fixed;
+					top: 90%;
+					left: 3%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="navbar">
+			<div class="navbar-section" id="shouye">首页</div>
+			<div class="navbar-section" id="zhanlanguan">展览馆</div>
+			<div class="navbar-section" id="three">Section 3</div>
+			<div class="navbar-section" id="four">Section 4</div>
+		</div>
+		<div id="content">
+			<div class="content-section">
+				<a href="page1.html"><img src="image1.jpg" alt="Image 1"></a>
+			</div>
+			<div class="content-section">
+				<a href="page2.html"><img src="image2.jpg" alt="Image 2"></a>
+			</div>
+			<div class="content-section">
+				<a href="page3.html"><img src="image3.jpg" alt="Image 3"></a>
+			</div>
+			<div class="content-section">
+				<a href="page4.html"><img src="image4.jpg" alt="Image 4"></a>
+			</div>
+		</div>
+		<div id="intro">
+			<h2>Introduction</h2>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#shouye").click(function() {
+				window.location.href = "./shouye.html";
+			});
+			$("#zhanlanguan").click(function() {
+				window.location.href = "./zhanlanguan.html";
+			});
+			$("#three").click(function() {
+				window.location.href = "https://example.com/page2.html";
+			});
+			$("#four").click(function() {
+				window.location.href = "https://example.com/page2.html";
+			});
+		});
+	</script>
